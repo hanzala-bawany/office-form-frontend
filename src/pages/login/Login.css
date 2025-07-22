@@ -1,0 +1,86 @@
+.loginPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.login {
+  border: 0.5px solid;
+  border-radius: 10px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 40px;
+  backdrop-filter: blur(10px) brightness(90%);
+  color: white;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* child 1 */
+.loginHeading {
+  font-size: 34px;
+  font-weight: 400;
+}
+
+/* child 2 */
+.allInputsConatiner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  column-gap: 40px;
+  row-gap: 5px;
+}
+
+.inputContainer > input {
+  border: 1px solid;
+  padding: 4px 6px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.inputContainer > input:focus {
+  outline: none;
+}
+
+/* child 3 */
+.loginFormFooter {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.loginFooterWording .span{
+    color: rgb(128, 21, 235);
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.loginBtn {
+  border: 1px solid;
+  padding: 8px 10px;
+  cursor: pointer;
+  background-color: rgb(154, 54, 251);
+  width: 100%;
+  border-radius: 20px;
+}
+
+.loginBtn:hover {
+  background-color: transparent;
+}
+
+
