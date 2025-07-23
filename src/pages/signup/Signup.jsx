@@ -3,7 +3,7 @@ import "./Signup.css";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from 'react-toastify';
-
+import url from "../../utills/url.js"
 
 const Signup = () => {
 
@@ -20,7 +20,7 @@ const Signup = () => {
     e.preventDefault()
     console.log(signupUserInfo, "user info");
     try {
-      const signupUser = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/signup`, signupUserInfo)
+      const signupUser = await axios.post(`${url}/api/auth/signup`, signupUserInfo)
       toast.success("User register successfully");
       console.log("user signUp successfully ", signupUser);
       navigate("/emailVerification" , {

@@ -3,6 +3,7 @@ import "./Login.css";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import url from "../../utills/url.js"
 
 const Login = () => {
   const [loginUserInfo, setLoginUserInfo] = useState({});
@@ -18,10 +19,12 @@ const Login = () => {
     e.preventDefault();
     console.log(loginUserInfo, "login user info");
 
+    
     try {
-      
+
+      console.log(`${url}/api/auth/login`,"<---- bhai ye url he ");
       const loginUser = await axios.post(
-        `${import.meta.env.VITE_API_URL}/api/auth/login`,
+        `${url}/api/auth/login`,
         loginUserInfo
       );
       toast.success("User login successfully");
