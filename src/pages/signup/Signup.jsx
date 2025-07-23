@@ -20,7 +20,7 @@ const Signup = () => {
     e.preventDefault()
     console.log(signupUserInfo, "user info");
     try {
-      const signupUser = await axios.post(`http://localhost:3001/api/auth/signup`, signupUserInfo)
+      const signupUser = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/signup`, signupUserInfo)
       toast.success("User register successfully");
       console.log("user signUp successfully ", signupUser);
       navigate("/emailVerification" , {

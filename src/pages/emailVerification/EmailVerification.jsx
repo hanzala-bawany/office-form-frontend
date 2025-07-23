@@ -25,7 +25,7 @@ const EmailVerification = () => {
 
         e.preventDefault()
         try {
-            const verifiedUser = await axios.post(`http://localhost:3001/api/auth/userVerification`, { userCode })
+            const verifiedUser = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/userVerification`, { userCode })
             toast.success("User Verified Successfully");
             console.log("user signUp successfully ", verifiedUser);
             navigate("/login")
@@ -45,7 +45,7 @@ const EmailVerification = () => {
 
                 (async () => {
                     try {
-                        const res = await axios.post(`http://localhost:3001/api/auth/verificationCodeDeleterAfter3m`, { email });
+                        const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/verificationCodeDeleterAfter3m`, { email });
                         console.log("user verification code deleted ", res);
                     } catch (error) {
                         console.log("Error deleting verification code", error);
@@ -63,7 +63,7 @@ const EmailVerification = () => {
 
         e.preventDefault()
         try {
-            const resendCodeUser = await axios.post(`http://localhost:3001/api/auth/resendCode`, { email })
+            const resendCodeUser = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/resendCode`, { email })
             console.log("user verification code resend successfully ", resendCodeUser);
             setUserCode("");
             setResetTrigger(prev => prev == 0 ? prev + 1 : prev - 1);

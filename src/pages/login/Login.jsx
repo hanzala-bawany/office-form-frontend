@@ -21,7 +21,7 @@ const Login = () => {
     try {
       
       const loginUser = await axios.post(
-        `http://localhost:3001/api/auth/login`,
+        `${import.meta.env.VITE_API_URL}/api/auth/login`,
         loginUserInfo
       );
       toast.success("User login successfully");
