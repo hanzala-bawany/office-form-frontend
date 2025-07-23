@@ -1,1 +1,2 @@
-export const url = "https://office-form-backend.vercel.app"
+ const url = "https://office-form-backend.vercel.app"
+ export default url;
